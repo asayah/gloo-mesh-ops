@@ -23,8 +23,8 @@ spec:
         hub: us-docker.pkg.dev/gloo-mesh/istio-a9797008feb0
         components:
           ingressGateways:
-          - name: gloo-gateway
-            namespace: gloo-gateway
+          - name: istio-gateway
+            namespace: istio-gateway
             enabled: true
             k8s:
               service:
