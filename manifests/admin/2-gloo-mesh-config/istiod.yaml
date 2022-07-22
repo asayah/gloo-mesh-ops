@@ -5,7 +5,7 @@ metadata:
   namespace: gloo-mesh
 spec:
   clusters:
-    - name: mgmt-cluster
+    - name: mgmt
   installations:
     - name: control-plane
       istioOperatorSpec:
