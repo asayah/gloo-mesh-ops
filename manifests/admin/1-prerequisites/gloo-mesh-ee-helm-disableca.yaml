@@ -14,7 +14,7 @@ spec:
     chart: gloo-mesh-enterprise
     helm:
       values: |
-        licenseKey: eyJhZGRPbnMiOltdLCJleHAiOjE2NjEwOTI3MTUsImlhdCI6MTY1ODUwMDcxNSwiayI6IlIza0NWdyIsImx0IjoidHJpYWwiLCJwcm9kdWN0IjoiZ2xvby1tZXNoLWdhdGV3YXkifQ.2hj7z9q5EOYdGFErdsj-jd8rwP25ioqKGXarNPkH2QU     
+        licenseKey: eyJhZGRPbnMiOiIiLCJleHAiOjE2NjQ1NzgxNjcsImlhdCI6MTY2MTk4NjE2NywiayI6IldSWHFMUSIsImx0IjoidHJpYWwiLCJwcm9kdWN0IjoiZ2xvby1tZXNoLWdhdGV3YXkifQ.b0JJvBVMK5L8aR9Ad-sIaXmvW0DRc_unobSn3qRzsLo
         mgmtClusterName: mgmt
         glooMeshMgmtServer:
           serviceType: ClusterIP
@@ -37,7 +37,7 @@ spec:
                   labels:
                     istio.io/rev: "1-13"
     repoURL: https://storage.googleapis.com/gloo-mesh-enterprise/gloo-mesh-enterprise
-    targetRevision: 2.1.0-beta13
+    targetRevision: v2.1.0-beta24
   syncPolicy:
     automated:
       prune: false

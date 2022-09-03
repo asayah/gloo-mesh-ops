@@ -11,7 +11,7 @@ spec:
       istioOperatorSpec:
         profile: minimal
         meshConfig:
-          trustDomain: cluster2
+          trustDomain: cluster1
           accessLogFile: /dev/stdout
           enableAutoMtls: true
           defaultConfig:
@@ -22,7 +22,7 @@ spec:
             proxyMetadata:
               ISTIO_META_DNS_CAPTURE: "true"
               ISTIO_META_DNS_AUTO_ALLOCATE: "true"
-              GLOO_MESH_CLUSTER_NAME: cluster2
+              GLOO_MESH_CLUSTER_NAME: cluster1
         tag: 1.13.4-arm
         hub: us-docker.pkg.dev/gloo-mesh/istio-a9797008feb0
         components:
