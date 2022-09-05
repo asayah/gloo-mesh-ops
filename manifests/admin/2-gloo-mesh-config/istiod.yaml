@@ -1,7 +1,7 @@
 apiVersion: admin.gloo.solo.io/v2
 kind: IstioLifecycleManager
 metadata:
-  name: gloo-gateway
+  name: istio-1-12-7
   namespace: gloo-mesh
 spec:
   clusters:
@@ -10,6 +10,7 @@ spec:
     - name: control-plane
       istioOperatorSpec:
         profile: minimal
+        revision: 1-12-7
         meshConfig:
           trustDomain: cluster1
           accessLogFile: /dev/stdout
@@ -23,8 +24,8 @@ spec:
               ISTIO_META_DNS_CAPTURE: "true"
               ISTIO_META_DNS_AUTO_ALLOCATE: "true"
               GLOO_MESH_CLUSTER_NAME: cluster1
-        tag: 1.13.4-arm
-        hub: us-docker.pkg.dev/gloo-mesh/istio-a9797008feb0
+        tag: 1.12.7-arm
+        hub: us-docker.pkg.dev/gloo-mesh/istio-69e5957db6d2
         components:
           ingressGateways:
             - name: istio-ingressgateway
@@ -32,8 +33,9 @@ spec:
     - name: ingress-gateway
       istioOperatorSpec:
         profile: empty
-        tag: 1.13.4-arm
-        hub: us-docker.pkg.dev/gloo-mesh/istio-a9797008feb0
+        revision: 1-12-7
+        tag: 1.12.7-arm
+        hub: us-docker.pkg.dev/gloo-mesh/istio-69e5957db6d2
         components:
           ingressGateways:
             - name: istio-ingressgateway
