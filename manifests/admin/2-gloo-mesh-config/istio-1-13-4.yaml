@@ -1,7 +1,7 @@
 apiVersion: admin.gloo.solo.io/v2
 kind: IstioLifecycleManager
 metadata:
-  name: gloo-gateway
+  name: istio-1-13-4
   namespace: gloo-mesh
 spec:
   clusters:
@@ -10,6 +10,7 @@ spec:
     - name: control-plane
       istioOperatorSpec:
         profile: minimal
+        revision: 1-13-4
         meshConfig:
           trustDomain: cluster2
           accessLogFile: /dev/stdout
@@ -32,6 +33,7 @@ spec:
     - name: ingress-gateway
       istioOperatorSpec:
         profile: empty
+        revision: 1-13-4
         tag: 1.13.4-arm
         hub: us-docker.pkg.dev/gloo-mesh/istio-a9797008feb0
         components:
