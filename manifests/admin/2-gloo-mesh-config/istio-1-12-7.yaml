@@ -39,7 +39,7 @@ spec:
         components:
           ingressGateways:
             - name: istio-ingressgateway
-              namespace: istio-gateway
+              namespace: istio-gateways
               label:
                 topology.istio.io/network: network1
               enabled: true
@@ -52,7 +52,7 @@ spec:
                   - name: ISTIO_META_REQUESTED_NETWORK_VIEW
                     value: network1
                 service:
-                  type: LoadBalancer
+                  type: ClusterIP
                   ports:
                     - name: http2
                       port: 80
