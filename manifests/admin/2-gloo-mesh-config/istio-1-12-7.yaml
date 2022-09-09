@@ -24,7 +24,7 @@ spec:
               ISTIO_META_DNS_CAPTURE: "true"
               ISTIO_META_DNS_AUTO_ALLOCATE: "true"
               GLOO_MESH_CLUSTER_NAME: cluster1
-        tag: 1.12.7-arm
+        tag: 1.12.7
         hub: us-docker.pkg.dev/gloo-mesh/istio-69e5957db6d2
         components:
           ingressGateways:
@@ -34,7 +34,7 @@ spec:
       istioOperatorSpec:
         profile: empty
         revision: 1-12-7
-        tag: 1.12.7-arm
+        tag: 1.12.7
         hub: us-docker.pkg.dev/gloo-mesh/istio-69e5957db6d2
         components:
           ingressGateways:
