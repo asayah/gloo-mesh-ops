@@ -51,6 +51,9 @@ spec:
                   # traffic through this gateway should be routed inside the network
                   - name: ISTIO_META_REQUESTED_NETWORK_VIEW
                     value: network1
+                serviceAnnotations:
+                      service.beta.kubernetes.io/aws-load-balancer-proxy-protocol: "*"
+                      service.beta.kubernetes.io/aws-load-balancer-type: "nlb"
                 service:
                   type: ClusterIP
                   ports:
