@@ -4,13 +4,14 @@ metadata:
   name: istio-1-13-4
   namespace: gloo-mesh
 spec:
-  clusters:
+  revision: 1-13-4
+  clusters: 
     - name: mgmt
   installations:
     - name: control-plane
       istioOperatorSpec:
         profile: minimal
-        revision: 1-13-4
+#        revision: 1-13-4
         meshConfig:
           trustDomain: cluster2
           accessLogFile: /dev/stdout
@@ -33,7 +34,7 @@ spec:
     - name: ingress-gateway
       istioOperatorSpec:
         profile: empty
-        revision: 1-13-4
+ #       revision: 1-13-4
         tag: 1.13.4-solo
         hub: us-docker.pkg.dev/gloo-mesh/istio-workshops
         components:
