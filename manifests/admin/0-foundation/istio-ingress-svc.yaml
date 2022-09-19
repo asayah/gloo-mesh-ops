@@ -7,7 +7,7 @@ spec:
   type: LoadBalancer
   selector:
     istio: ingressgateway
-    istio.io/rev: solo-1-12
+    istio.io/rev: solo-1-13
   ports:
   - name: status-port
     port: 15021
